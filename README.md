@@ -1,1 +1,2 @@
-# Proyecto_inmobiliaria
+# ModeladoDeSoftwareIES
+Repositorio de practica, primer commit.
