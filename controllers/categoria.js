@@ -30,6 +30,11 @@ const categoriaPost = async (req = request, res = response) => {
 
 //Se devuelve a través de una solicitud "get" todos las categorias existentes, siempre y cuando no hayan sido dados de baja.
 const categoriaGet = async (req = request, res = response) => {
+    res.json({"casa1":{"nombre":"La casa del emi", "direccion": "MD c3"},
+                "casa2":{"nombre":"La casa del renzo", "direccion": "MD c2"} })
+
+    console.log("pepe")
+    /*
     try {
         const getCategoria = await Categoria.findAll({
             where: {
@@ -41,6 +46,7 @@ const categoriaGet = async (req = request, res = response) => {
     } catch (error) {
         console.error(error)
     }
+    */
     
 }
 

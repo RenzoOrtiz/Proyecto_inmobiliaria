@@ -9,7 +9,7 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;//3000;
-        this.api = '/api';
+        this.api = '/';
         this.app.use(express.json());
 
         // Rutas de mi aplicación
