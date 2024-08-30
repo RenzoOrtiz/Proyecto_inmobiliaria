@@ -1,6 +1,6 @@
-const Cliente = require('./cliente');
-const Categoria = require('./categoria');
-const CategoriaCliente = require('./categoriaCliente');
+const Cliente = require('../models/cliente');
+const Categoria = require('../models/TypeLink');
+const CategoriaCliente = require('../models/categoriaCliente');
 
 
 //asociación 1 a N entre categoria(1) y categoriaCliente(N), en donde categoriaCliente(N) tiene la clave foránea

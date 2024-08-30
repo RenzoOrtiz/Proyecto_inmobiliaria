@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 //require('../asociation');
 
 
-        const sequelize = new Sequelize(`postgres://postgres:${process.env.PGPASS}@localhost:5432/${process.env.PGDB}`,{
+        const sequelize = new Sequelize(`postgres://${process.env.PGUSER}:${process.env.PGPASS}@localhost:5432/${process.env.PGDB}`,{
 
         //Heroku
         //const sequelize = new Sequelize(`${process.env.DATABASE_URL}`,{

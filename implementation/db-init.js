@@ -1,17 +1,9 @@
 const sequelize = require('../database/config');
-const Perfil = require('../models/perfil');
 const nanoid = require('nanoid');
-const Permiso = require('../models/permiso');
-const PerfilPermiso = require('../models/perfilPermiso');
-const DestinoNotificacion = require('../models/destinoNotificacion');
-const TipoNotificacion = require('../models/tipoNotificacion');
-const ConfiguracionNotificacion = require('../models/configuracionNotificacion');
-const TipoActividad = require('../models/tipoActividad');
-const ImportanciaObservacion = require('../models/importanciaObservacion');
-const ActividadEstado = require('../models/actividadEstado');
 const { Op } = require("sequelize");
 const moment = require('moment')
 
+const ActividadEstado = require('../models/actividadEstado');
 
 /*Al iniciar la base datos(creación), se crea por defecto un perfil ADMIN, que si ya existe dicho perfil esta 
         acción no se realiza*/

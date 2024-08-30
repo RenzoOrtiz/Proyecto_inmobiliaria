@@ -2,7 +2,7 @@
 const { request, response } = require('express');
 //const nanoid = require('nanoid');
 const moment = require('moment');
-const Categoria = require('../models/categoria');
+const Categoria = require('../models/TypeLink');
 //const bcryptjs = require('bcrypt');
 //const Perfil = require('../models/perfil');
 //const { crearUsuarioNotificacion } = require('./notificacion');
