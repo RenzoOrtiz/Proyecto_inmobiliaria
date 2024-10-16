@@ -1,28 +1,24 @@
 const sequelize = require('../database/config');
 const nanoid = require('nanoid');
+//import { nanoid } from 'nanoid';
+//const { nanoid } = require('nanoid/async');
 const { Op } = require("sequelize");
 const moment = require('moment')
 
-const ActividadEstado = require('../models/actividadEstado');
+const TypeLink = require('../models/TypeLink');
 
-/*Al iniciar la base datos(creación), se crea por defecto un perfil ADMIN, que si ya existe dicho perfil esta 
-        acción no se realiza*/
+/*iniciar la base datos(creación)*/
 
 const dbInit = sequelize.sync({ force: false }).then(async () => {
 
     // se crean los estados por los que puede pasar una actividad
-    const existeActividadEstado = await ActividadEstado.findOne({ where: { actividadEstadoId: '1111' } })
-    if (existeActividadEstado) {
-        console.log('El estado "En progreso" de ActividadEstado ya existe')
-    }
-    else {
-        const actividadEstado = new ActividadEstado({
-            actividadEstadoId: "1111",
-            NombreActividadEstado: "En Progreso"
-        })
-        await actividadEstado.save()
-    }
-
+    const TypeLink = new TypeLink({
+        actividadEstadoId: nanoid.nanoid(),
+        NombreActividadEstado: "En Progreso"
+    })
+    await actividadEstado.save()
+    
+/*
     const existeActividadEstado1 = await ActividadEstado.findOne({ where: { actividadEstadoId: '2222' } })
     if (existeActividadEstado1) {
         console.log('El estado "Completada" de ActividadEstado ya existe')
@@ -856,7 +852,7 @@ const dbInit = sequelize.sync({ force: false }).then(async () => {
         })
         await newConfiguracionNotificacionCES.save()
     }
-
+    */
 
     console.log("Nos hemos conectado a la base de datos");
 

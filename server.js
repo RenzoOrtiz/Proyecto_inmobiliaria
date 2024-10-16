@@ -1,6 +1,7 @@
 //Importaciones necesarias
 const express = require('express');
 const path = require('path');
+const dbinit = require('./implementation/dbinit');
 
 // Allowed extensions list can be extended depending on your own needs
 class Server {
@@ -29,10 +30,10 @@ class Server {
         });
     }
 
-    /*
     // Se llama al objeto que inicializa las clases necesarias como los perfiles y permisos al iniciar la base de datos
     dbinit;
-    */
+        // Tu lógica de inicialización de la base de datos aquí
+    
 }
 
 module.exports = Server;
